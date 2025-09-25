@@ -10,27 +10,24 @@ let getDictionary = function (lang)
             case 1: return "one";
             case 2: return "two";
             case 3: return "three";
-            default: return "unknown";
+            default: return "unknown"; // Returns an "unknown" if inputs are beyond the switch statement
         }
     };
 
-    /*
-        Complete the definiton of the englishDictionary function
-    */
     let frenchDictionary = function (number)
     {
         switch (number){
             case 1: return "un";
             case 2: return "deux";
             case 3: return "trois";
-            default: return "inconnu";
+            default: return "inconnu"; // Returns "inconnu" if inputs are beyond the switch statement
         }    
     };
 
         if (lang === 'E') return englishDictionary;
         if (lang === 'F') return frenchDictionary;
 
-        return function () { return "invalid language"};
+        return function () { return "invalid language"}; // Returns an "invalid language" if a invalid language is submitted
 };
 
 
